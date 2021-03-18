@@ -16,6 +16,8 @@ let counCurrentOne = 0;
 let countTempCero = 0;
 let countTempOne = 0;
 
+imgDice.classList.add('hidden');
+
 let randomeNumber = function () {
   return Math.trunc(Math.random() * 6) + 1;
 };
@@ -32,7 +34,7 @@ let toggleClassPlayers = function () {
 
 btnRollDice.addEventListener('click', function () {
   let randomeValue = randomeNumber();
-
+  imgDice.classList.remove('hidden');
   imgDice.setAttribute('src', `dice-${randomeValue}.png`);
 
   if (randomeValue === 1) {
@@ -88,7 +90,7 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNew.addEventListener('click', function () {
-  imgDice.setAttribute('src', 'dice-5.png');
+  imgDice.classList.add('hidden');
   btnRollDice.disabled = false;
   btnHold.disabled = false;
   currentScoreCero.textContent = 0;

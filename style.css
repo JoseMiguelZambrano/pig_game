@@ -166,5 +166,6 @@ main {
   color: #c7365f;
 }
 
-/* btnRollDice.disabled = true;
-btnHold.disabled = true; */
+.hidden {
+  display: none;
+}
